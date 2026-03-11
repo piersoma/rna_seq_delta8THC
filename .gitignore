@@ -1,3 +1,25 @@
+# Bioinformatics - large data files
+results/
+raw_data/
+*.fastq
+*.fastq.gz
+*.sra
+*.bam
+*.sam
+*.bai
+
+# Conda/Snakemake
+.snakemake/
+*.conda/
+
+# R artifacts
+.Rhistory
+.RData
+*.Rout
+
+# Mac
+.DS_Store
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
