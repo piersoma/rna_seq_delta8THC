@@ -1,0 +1,18 @@
+configfile: "config/config.yaml"
+
+# Import all rule files
+include: "rules/download.smk"
+include: "rules/preprocess.smk"
+include: "rules/alignment.smk"
+include: "rules/counts.smk"
+include: "rules/multiqc.smk"
+include: "rules/deg.smk"
+
+# Final targets
+rule all:
+    input:
+        # Downloaded FASTQs
+        expand("/opt/students/martha.pierson/raw_data_delta8THC/{sample}_raw_1.fastq",
+               sample=config["samples"]),
+        expand("/opt/students/martha.pierson/raw_data_delta8THC/{sample}_raw_2.fastq",
+               sample=config["samples"])
