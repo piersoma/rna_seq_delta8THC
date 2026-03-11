@@ -1,0 +1,57 @@
+sample_id,gsm_id,treatment,product_type,donor,well,cell_type,library_layout
+SRR37298734,GSM9533357,PG/VG Control (40/60),control,donor4,2,HBEC,PAIRED
+SRR37298735,GSM9533356,PG/VG Control (40/60),control,donor4,1,HBEC,PAIRED
+SRR37298736,GSM9533355,PG/VG Control (40/60),control,donor3,2,HBEC,PAIRED
+SRR37298737,GSM9533354,PG/VG Control (40/60),control,donor3,1,HBEC,PAIRED
+SRR37298738,GSM9533353,PG/VG Control (40/60),control,donor2,2,HBEC,PAIRED
+SRR37298739,GSM9533352,PG/VG Control (40/60),control,donor2,1,HBEC,PAIRED
+SRR37298740,GSM9533351,PG/VG Control (40/60),control,donor1,2,HBEC,PAIRED
+SRR37298741,GSM9533350,PG/VG Control (40/60),control,donor1,1,HBEC,PAIRED
+SRR37298742,GSM9533349,Serene Tree Juice Green Apple,juice,donor4,2,HBEC,PAIRED
+SRR37298743,GSM9533348,Serene Tree Juice Green Apple,juice,donor4,1,HBEC,PAIRED
+SRR37298744,GSM9533347,Serene Tree Juice Green Apple,juice,donor3,2,HBEC,PAIRED
+SRR37298745,GSM9533346,Serene Tree Juice Green Apple,juice,donor3,1,HBEC,PAIRED
+SRR37298746,GSM9533345,Serene Tree Juice Green Apple,juice,donor2,2,HBEC,PAIRED
+SRR37298747,GSM9533344,Serene Tree Juice Green Apple,juice,donor2,1,HBEC,PAIRED
+SRR37298748,GSM9533343,Serene Tree Juice Green Apple,juice,donor1,2,HBEC,PAIRED
+SRR37298749,GSM9533342,Serene Tree Juice Green Apple,juice,donor1,1,HBEC,PAIRED
+SRR37298750,GSM9533341,Serene Tree Juice Strawberry,juice,donor4,2,HBEC,PAIRED
+SRR37298751,GSM9533340,Serene Tree Juice Strawberry,juice,donor4,1,HBEC,PAIRED
+SRR37298752,GSM9533339,Serene Tree Juice Strawberry,juice,donor3,2,HBEC,PAIRED
+SRR37298753,GSM9533338,Serene Tree Juice Strawberry,juice,donor3,1,HBEC,PAIRED
+SRR37298754,GSM9533337,Serene Tree Juice Strawberry,juice,donor2,2,HBEC,PAIRED
+SRR37298755,GSM9533336,Serene Tree Juice Strawberry,juice,donor2,1,HBEC,PAIRED
+SRR37298756,GSM9533335,Serene Tree Juice Strawberry,juice,donor1,2,HBEC,PAIRED
+SRR37298757,GSM9533334,Serene Tree Juice Strawberry,juice,donor1,1,HBEC,PAIRED
+SRR37298758,GSM9533333,Stiizy Disposable Skywalker OG,disposable,donor4,2,HBEC,PAIRED
+SRR37298759,GSM9533332,Stiizy Disposable Skywalker OG,disposable,donor4,1,HBEC,PAIRED
+SRR37298760,GSM9533331,Stiizy Disposable Skywalker OG,disposable,donor3,2,HBEC,PAIRED
+SRR37298761,GSM9533330,Stiizy Disposable Skywalker OG,disposable,donor3,1,HBEC,PAIRED
+SRR37298762,GSM9533329,Stiizy Disposable Skywalker OG,disposable,donor2,2,HBEC,PAIRED
+SRR37298763,GSM9533328,Stiizy Disposable Skywalker OG,disposable,donor2,1,HBEC,PAIRED
+SRR37298764,GSM9533327,Stiizy Disposable Skywalker OG,disposable,donor1,2,HBEC,PAIRED
+SRR37298765,GSM9533326,Stiizy Disposable Skywalker OG,disposable,donor1,1,HBEC,PAIRED
+SRR37298766,GSM9533325,Palmetto Disposable BubbaKush,disposable,donor4,2,HBEC,PAIRED
+SRR37298767,GSM9533324,Palmetto Disposable BubbaKush,disposable,donor4,1,HBEC,PAIRED
+SRR37298768,GSM9533323,Palmetto Disposable BubbaKush,disposable,donor3,2,HBEC,PAIRED
+SRR37298769,GSM9533322,Palmetto Disposable BubbaKush,disposable,donor3,1,HBEC,PAIRED
+SRR37298770,GSM9533321,Palmetto Disposable BubbaKush,disposable,donor2,2,HBEC,PAIRED
+SRR37298771,GSM9533320,Palmetto Disposable BubbaKush,disposable,donor2,1,HBEC,PAIRED
+SRR37298772,GSM9533319,Palmetto Disposable BubbaKush,disposable,donor1,2,HBEC,PAIRED
+SRR37298773,GSM9533318,Palmetto Disposable BubbaKush,disposable,donor1,1,HBEC,PAIRED
+SRR37298774,GSM9533317,Not Ya Son's Weed Cartridge Grandaddy Purp,distillate,donor4,2,HBEC,PAIRED
+SRR37298775,GSM9533316,Not Ya Son's Weed Cartridge Grandaddy Purp,distillate,donor4,1,HBEC,PAIRED
+SRR37298776,GSM9533315,Not Ya Son's Weed Cartridge Grandaddy Purp,distillate,donor3,2,HBEC,PAIRED
+SRR37298777,GSM9533314,Not Ya Son's Weed Cartridge Grandaddy Purp,distillate,donor3,1,HBEC,PAIRED
+SRR37298778,GSM9533313,Not Ya Son's Weed Cartridge Grandaddy Purp,distillate,donor2,2,HBEC,PAIRED
+SRR37298779,GSM9533312,Not Ya Son's Weed Cartridge Grandaddy Purp,distillate,donor2,1,HBEC,PAIRED
+SRR37298780,GSM9533311,Not Ya Son's Weed Cartridge Grandaddy Purp,distillate,donor1,2,HBEC,PAIRED
+SRR37298781,GSM9533310,Not Ya Son's Weed Cartridge Grandaddy Purp,distillate,donor1,1,HBEC,PAIRED
+SRR37298782,GSM9533309,Palmetto Cartridge Sour Lifter,distillate,donor4,2,HBEC,PAIRED
+SRR37298783,GSM9533308,Palmetto Cartridge Sour Lifter,distillate,donor4,1,HBEC,PAIRED
+SRR37298784,GSM9533307,Palmetto Cartridge Sour Lifter,distillate,donor3,2,HBEC,PAIRED
+SRR37298785,GSM9533306,Palmetto Cartridge Sour Lifter,distillate,donor3,1,HBEC,PAIRED
+SRR37298786,GSM9533305,Palmetto Cartridge Sour Lifter,distillate,donor2,2,HBEC,PAIRED
+SRR37298787,GSM9533304,Palmetto Cartridge Sour Lifter,distillate,donor2,1,HBEC,PAIRED
+SRR37298788,GSM9533303,Palmetto Cartridge Sour Lifter,distillate,donor1,2,HBEC,PAIRED
+SRR37298789,GSM9533302,Palmetto Cartridge Sour Lifter,distillate,donor1,1,HBEC,PAIRED
