@@ -1,0 +1,5 @@
+latency-wait: 30
+retries: 3
+use-conda: true
+conda-frontend: conda
+cores: 4

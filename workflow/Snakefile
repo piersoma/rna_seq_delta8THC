@@ -15,4 +15,17 @@ rule all:
         expand("/opt/students/martha.pierson/raw_data_delta8THC/{sample}_raw_1.fastq",
                sample=config["samples"]),
         expand("/opt/students/martha.pierson/raw_data_delta8THC/{sample}_raw_2.fastq",
+               sample=config["samples"]),
+        # FastQC raw
+        expand("results/fastqc/{sample}_raw_1_fastqc.html",
+               sample=config["samples"]),
+        expand("results/fastqc/{sample}_raw_2_fastqc.html",
+               sample=config["samples"]),
+        # Fastp
+        expand("results/fastp/{sample}_fastp.html",
+               sample=config["samples"]),
+        # FastQC filtered
+        expand("results/fastqc/{sample}_filtered_1_fastqc.html",
+               sample=config["samples"]),
+        expand("results/fastqc/{sample}_filtered_2_fastqc.html",
                sample=config["samples"])
