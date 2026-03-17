@@ -1,4 +1,4 @@
-latency-wait: 30
+latency-wait: 120
 retries: 3
 use-conda: true
 conda-frontend: conda

@@ -1,5 +1,9 @@
 configfile: "config/config.yaml"
 
+# Base paths - change these if the project moves to a different server
+BASE_DIR = "/opt/students/martha.pierson/rna_seq_delta8THC"
+DATA_DIR = "/opt/students/martha.pierson/raw_data_delta8THC"
+
 # Import all rule files
 include: "rules/download.smk"
 include: "rules/preprocess.smk"
@@ -11,21 +15,23 @@ include: "rules/deg.smk"
 # Final targets
 rule all:
     input:
-        # Downloaded FASTQs
-        expand("/opt/students/martha.pierson/raw_data_delta8THC/{sample}_raw_1.fastq",
-               sample=config["samples"]),
-        expand("/opt/students/martha.pierson/raw_data_delta8THC/{sample}_raw_2.fastq",
-               sample=config["samples"]),
-        # FastQC raw
-        expand("results/fastqc/{sample}_raw_1_fastqc.html",
-               sample=config["samples"]),
-        expand("results/fastqc/{sample}_raw_2_fastqc.html",
-               sample=config["samples"]),
-        # Fastp
-        expand("results/fastp/{sample}_fastp.html",
-               sample=config["samples"]),
-        # FastQC filtered
-        expand("results/fastqc/{sample}_filtered_1_fastqc.html",
-               sample=config["samples"]),
-        expand("results/fastqc/{sample}_filtered_2_fastqc.html",
-               sample=config["samples"])
+        # Downloaded FASTQs (download.smk)
+        expand(DATA_DIR + "/{sample}_raw_1.fastq.gz", sample=config["samples"]),
+        expand(DATA_DIR + "/{sample}_raw_2.fastq.gz", sample=config["samples"]),
+        # FastQC on raw reads (preprocess.smk)
+        expand(BASE_DIR + "/results/fastqc/{sample}_raw_1_fastqc.html", sample=config["samples"]),
+        expand(BASE_DIR + "/results/fastqc/{sample}_raw_2_fastqc.html", sample=config["samples"]),
+        # Fastp trimming (preprocess.smk)
+        expand(BASE_DIR + "/results/fastp/{sample}_fastp.html", sample=config["samples"]),
+        # FastQC on filtered reads (preprocess.smk)
+        expand(BASE_DIR + "/results/fastqc/{sample}_filtered_1_fastqc.html", sample=config["samples"]),
+        expand(BASE_DIR + "/results/fastqc/{sample}_filtered_2_fastqc.html", sample=config["samples"]),
+        # HISAT2 alignment (alignment.smk)
+        expand(BASE_DIR + "/results/hisat2/{sample}.sorted.bam", sample=config["samples"]),
+        expand(BASE_DIR + "/results/hisat2/{sample}.sorted.bam.bai", sample=config["samples"]),
+        expand(BASE_DIR + "/results/hisat2/{sample}_summary.txt", sample=config["samples"]),
+        # featureCounts (counts.smk)
+        expand(BASE_DIR + "/results/counts/{sample}.featureCounts.txt", sample=config["samples"]),
+        expand(BASE_DIR + "/results/counts/{sample}.featureCounts.txt.summary", sample=config["samples"]),
+        # MultiQC report (multiqc.smk)
+        BASE_DIR + "/results/multiqc/multiqc_report.html"

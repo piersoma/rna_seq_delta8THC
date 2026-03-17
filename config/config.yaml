@@ -59,8 +59,8 @@ samples:
 
 # Paths
 raw_data_dir: "/opt/students/martha.pierson/raw_data_delta8THC"
-genome_index: "/opt/students/martha.pierson/reference/GRCh38/GRCh38_index"
-gtf_file: "/opt/students/martha.pierson/reference/GRCh38/Homo_sapiens.GRCh38.109.gtf"
+genome_index: "/opt/shared/SYSBIO/Homo_sapiens.GRCh38/genome_tran"
+gtf_file: "/opt/shared/SYSBIO/Homo_sapiens.GRCh38/genome.gtf"
 
 # Samplesheet
 samplesheet: "config/samplesheet.csv"

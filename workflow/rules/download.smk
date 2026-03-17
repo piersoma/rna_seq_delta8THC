@@ -1,28 +1,34 @@
+DATA_DIR = config["raw_data_dir"]
+
 rule prefetch:
     output:
-        sra = temp("/opt/students/martha.pierson/raw_data_delta8THC/{sample}/{sample}.sra")
+        sra = DATA_DIR + "/{sample}/{sample}.sra"
     params:
-        outdir = "/opt/students/martha.pierson/raw_data_delta8THC"
+        outdir = DATA_DIR
     conda: "../envs/sra_tools.yaml"
     shell:
         """
         prefetch {wildcards.sample} --output-directory {params.outdir}
         """
 
-rule fastq_dump:
+rule fasterq_dump:
     input:
-        sra = "/opt/students/martha.pierson/raw_data_delta8THC/{sample}/{sample}.sra"
+        sra = DATA_DIR + "/{sample}/{sample}.sra"
     output:
-        r1 = "/opt/students/martha.pierson/raw_data_delta8THC/{sample}_raw_1.fastq",
-        r2 = "/opt/students/martha.pierson/raw_data_delta8THC/{sample}_raw_2.fastq"
+        r1 = DATA_DIR + "/{sample}_raw_1.fastq.gz",
+        r2 = DATA_DIR + "/{sample}_raw_2.fastq.gz"
     params:
-        outdir = "/opt/students/martha.pierson/raw_data_delta8THC"
+        outdir = DATA_DIR
     conda: "../envs/sra_tools.yaml"
+    threads: 6
     shell:
         """
-        fastq-dump --split-files \
-            --outdir {params.outdir} \
-            {input.sra}
-        mv {params.outdir}/{wildcards.sample}_1.fastq {output.r1}
-        mv {params.outdir}/{wildcards.sample}_2.fastq {output.r2}
+        fasterq-dump {input.sra} \
+            --split-files \
+            --threads {threads} \
+            --outdir {params.outdir}
+        mv {params.outdir}/{wildcards.sample}_1.fastq {params.outdir}/{wildcards.sample}_raw_1.fastq
+        mv {params.outdir}/{wildcards.sample}_2.fastq {params.outdir}/{wildcards.sample}_raw_2.fastq
+        pigz -p {threads} {params.outdir}/{wildcards.sample}_raw_1.fastq
+        pigz -p {threads} {params.outdir}/{wildcards.sample}_raw_2.fastq
         """
