@@ -34,4 +34,6 @@ rule all:
         expand(BASE_DIR + "/results/counts/{sample}.featureCounts.txt", sample=config["samples"]),
         expand(BASE_DIR + "/results/counts/{sample}.featureCounts.txt.summary", sample=config["samples"]),
         # MultiQC report (multiqc.smk)
-        BASE_DIR + "/results/multiqc/multiqc_report.html"
+        BASE_DIR + "/results/multiqc/multiqc_report.html",
+        # DEG analysis (deg.smk)
+        BASE_DIR + "/results/DEG/DEG_report.html"
